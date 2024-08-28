@@ -1,0 +1,460 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+    overflow-x: visible;
+}
+
+.sidebar{
+    background-color: black;
+    width: 350px;
+    border-radius: 1rem; /* 1 rem=16px  */
+    margin-right: 0.5rem;
+    z-index: 5;
+    position: relative;
+}
+
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    height: 72px;
+    left: 0 ;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option{
+   line-height: 2.5rem;
+   opacity: 0.7;
+   padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover{
+    line-height: 2.5rem;
+    opacity: 1;
+ }
+
+.nav-option i{
+    font-size: 1.25rem;
+}
+
+.nav-option a{
+    font-size: 1rem;
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.5;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+
+.box{
+    background-color: #232323;
+    height: 8.50rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 1.75rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 550;
+
+}
+
+.box-p2{
+    font-size: 0.82rem;
+    opacity: 9;
+}
+
+.badge{
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 550;
+    margin-top: 0.5rem;
+    height: 2rem;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons img{
+    margin: 0.65rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+     margin-right: 1.2rem;
+}
+
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .hide{
+        display: none;
+    }
+}
+
+.card {
+    background-color: #121212;
+    width: 170px;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card:hover{
+    background-color: #232323;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -0.5rem;
+    margin-bottom: 4rem;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem; 
+}
+
+.card-title{
+    font-weight: 600;
+    
+}
+
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+h2{
+    margin: 30px 0px 0px 0px;
+}
+
+.footer{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 2rem; */
+}
+
+.line{
+    width : 93%;
+    height: 90%;
+    border-top: 1px solid white;
+    opacity: 0.25;
+    
+}
+
+.music-player{
+    display: flex;
+    width: 100%;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-left: 1.75rem;
+    opacity: 0.6;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 60%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.controls{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cntrols-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls-icons i {
+    height: 1rem;
+    margin-left: 0.85rem;
+    opacity: 0.6;
+}
+
+
+.controls-icons i:hover{
+    opacity: 1;
+}
+
+.speaker-range{
+    width: 40%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.speaker-range::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.speaker-range::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.album{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.album-cover{
+    height: 56px;
+    width: 56px;
+    margin: 1.5rem;
+    border-radius: 6px;
+}
+
+.name1{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.name2{
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+}
+
+.plusicon{
+    display: flex;
+    justify-content: center;
+    margin-left: 1.4rem;
+    margin-bottom: 0.1rem;
+    opacity: 0.5;
+}
+
+.plusicon:hover{
+    opacity: 1;
+}
+
+.end{
+    height: 281px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.company{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin-left : 2rem;
+}
+
+.words{
+    margin: 0.5rem;
+}
+
+.Communities{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -1rem;  
+}
+
+.Usefull-links{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -1rem;
+}
+
+.Spotify-Plans{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -1rem;
+}
+
+.words:hover{
+    text-decoration: underline;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #121212;
+    color: white;
+    z-index: 10;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.copyright{
+    height: 100px;
+    display: flex;
+}
+
+.copyright i{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 7rem;
+    margin-left: -30rem;
+    opacity: 0.6;
+}
+
+.text p{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8.1rem;
+    margin-left: -28rem;
+    opacity: 0.5;
+}
+    
+
+   
